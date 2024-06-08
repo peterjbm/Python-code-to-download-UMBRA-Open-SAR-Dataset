@@ -4,9 +4,10 @@ from botocore import UNSIGNED
 from botocore.config import Config
 
 # Configuration
+#bucket_name = 'umbra-open-data-catalog'
 bucket_name = 'umbra-open-data-catalog'
-prefix = ''  # Update this if you want to narrow down the search
-local_download_path = r'path\to\umbra_data'  # Update this path
+prefix = 'sar-data/tasks/ad hoc/Indian_Institute_of_Science/432eb431-9fc0-4db6-a945-e48498869b98/2024-02-23-04-37-05_UMBRA-04/'  # Update this if you want to narrow down the search
+local_download_path = '/Users/lrde/Documents/GitHub/Python-code-to-download-UMBRA-Open-SAR-Dataset/Data'  # Update this path
 
 # Create a boto3 client with no AWS credentials
 s3_client = boto3.client('s3', config=Config(signature_version=UNSIGNED))
