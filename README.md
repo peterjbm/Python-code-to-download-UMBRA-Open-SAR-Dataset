@@ -10,7 +10,7 @@ Before you begin, ensure you have the following:
 
 1. **Python**: This script requires Python 3.6 or later. You can download and install Python from [python.org](https://www.python.org/downloads/).
 2. **pip**: Python's package installer. It comes bundled with Python, but you can upgrade it by running:
-    ```bash
+    ```python
     python -m pip install --upgrade pip
     ```
 3. **AWS CLI**: Although not strictly necessary for running this script, it is useful for verifying access to the S3 bucket. You can install the AWS CLI from [here](https://aws.amazon.com/cli/).
@@ -27,7 +27,7 @@ boto3 is the AWS SDK for Python, which allows Python developers to write softwar
 
 Install boto3 using pip:
 
-```bash
+```python
 pip install boto3
 ```
 
@@ -44,6 +44,14 @@ Before running the script, update the local_download_path in the script to the d
 This will start downloading all `.tif` and `.json` files from the S3 bucket to the specified local directory.
 
 After running the script, navigate to the local directory you specified (e.g., C:\Users\misha\OneDrive\Desktop\umbra_data). You should see the downloaded `.tif` and `.json` files, organized in the same structure as they are in the S3 bucket.
+
+## Example of using prefix
+
+```python
+prefix = 'sar-data/tasks/ad hoc/Bhopal_India/f3ff6f0d-dc99-42dc-9704-3d9adc3f5e56/2024-02-14-16-57-13_UMBRA-07/'
+```
+
+Note: In prefix url keep space wherever space is there in folder name, like in folder name 'ad hoc' keep 'ad hoc' itself instead of 'ad%20hoc' which will be present in search bar.
 
 ## Support
 
